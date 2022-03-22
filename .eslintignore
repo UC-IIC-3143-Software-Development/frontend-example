@@ -1,0 +1,8 @@
+.idea/
+node_modules
+coverage
+build
+.DS_Store
+npm-debug.log*
+.history
+.env-config.js
