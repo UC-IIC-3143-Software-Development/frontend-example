@@ -5,6 +5,7 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 
+// eslint-disable-next-line import/extensions
 import { server } from "./mocks/server.js";
 
 // Establish API mocking before all tests.
