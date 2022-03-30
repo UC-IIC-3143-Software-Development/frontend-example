@@ -4,7 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-if (process.env.NODE_ENV === "development") {
+if (
+  process.env.NODE_ENV === "development" &&
+  process.env.REACT_APP_MOCK_SERVICES?.trim() === "true"
+) {
   // eslint-disable-next-line global-require
   const { worker } = require("./mocks/browser");
   worker.start();
