@@ -4,6 +4,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+if (process.env.NODE_ENV === "development") {
+  // eslint-disable-next-line global-require
+  const { worker } = require("./mocks/browser");
+  worker.start();
+}
+
 ReactDOM.render(
   // eslint-disable-next-line react/jsx-filename-extension
   <React.StrictMode>
