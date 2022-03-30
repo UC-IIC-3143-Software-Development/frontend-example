@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { rest } from "msw";
+import { users } from "./usersMock";
 
 export const handlers = [
   rest.post("/login", (req, res, ctx) => {
@@ -42,4 +43,8 @@ export const handlers = [
       })
     );
   }),
+
+  rest.get("https://jsonplaceholder.typicode.com/users", (req, res, ctx) =>
+    res(ctx.json(users))
+  ),
 ];
