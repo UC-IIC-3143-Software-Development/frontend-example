@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
 
-test("renders learn react link", () => {
+test("Given render App When the page load Then show text learn react link", () => {
   // Given
   render(<App />);
 
@@ -13,7 +13,7 @@ test("renders learn react link", () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test("Given render App When user click on button Should change the text to Current theme dark", () => {
+test("Given render App When user click on button Then change the text to Current theme dark", () => {
   // Given
   render(<App />);
   const buttonChangeTheme = screen.getByText(/Current theme/i);
@@ -25,7 +25,7 @@ test("Given render App When user click on button Should change the text to Curre
   expect(buttonChangeTheme).toHaveTextContent(/dark/i);
 });
 
-test("Given render App When user click on button Should change the text to Current theme light", () => {
+test("Given render App When user click on button Then change the text to Current theme light", () => {
   // Given
   render(<App />);
   const buttonChangeTheme = screen.getByText(/Current theme/i);
