@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./App.css";
-import UsersListsFromAPI from "./components/users";
+import UsersListsFromAPI from "./components/usersListsFromAPI";
+import ButtonChangeTheme from "./components/buttonChangeTheme";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light";
-    setTheme(nextTheme);
-  };
-
   return (
     <div className="App">
       <UsersListsFromAPI />
@@ -23,9 +17,7 @@ function App() {
         Learn React
       </a>
 
-      <button type="button" onClick={toggleTheme}>
-        Current theme: {theme}
-      </button>
+      <ButtonChangeTheme />
     </div>
   );
 }

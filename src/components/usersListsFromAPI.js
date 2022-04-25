@@ -16,15 +16,18 @@ function UsersListsFromAPI() {
   }, []);
 
   return (
-    <div>
+    <section>
+      <h1 id="users-heading">Users</h1>
       {users.length > 0 && (
         <ul>
           {users.map((user) => (
-            <li key={user.id}>{user.name}</li>
+            <li key={user.id} data-testid="username-list">
+              {user.name}
+            </li>
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
 
