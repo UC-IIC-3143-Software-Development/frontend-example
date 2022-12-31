@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
 
-test("Given render App When the page load Then show text learn react link", () => {
+test("show link element when render App component", () => {
   // Given
   render(<App />);
 
