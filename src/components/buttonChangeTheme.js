@@ -9,7 +9,7 @@ function ButtonChangeTheme() {
   };
 
   return (
-    <button type="button" onClick={toggleTheme}>
+    <button role="button" onClick={toggleTheme}>
       Current theme: {theme}
     </button>
   );

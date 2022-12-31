@@ -12,33 +12,3 @@ test("Given render App When the page load Then show text learn react link", () =
   // Then
   expect(linkElement).toBeInTheDocument();
 });
-
-test("Given render App When user click on button Then change the text to Current theme dark", () => {
-  // Given
-  render(<App />);
-  const buttonChangeTheme = screen.getByText(/Current theme/i);
-
-  // When
-  userEvent.click(buttonChangeTheme);
-
-  // Then
-  expect(buttonChangeTheme).toHaveTextContent(/dark/i);
-});
-
-test("Given render App When user click on button Then change the text to Current theme light", () => {
-  // Given
-  render(<App />);
-  const buttonChangeTheme = screen.getByText(/Current theme/i);
-
-  // When: current button says light
-  userEvent.click(buttonChangeTheme);
-
-  // Then
-  expect(buttonChangeTheme).toHaveTextContent(/dark/i);
-
-  // When: current button says dark
-  userEvent.click(buttonChangeTheme);
-
-  // Then
-  expect(buttonChangeTheme).toHaveTextContent(/light/i);
-});
